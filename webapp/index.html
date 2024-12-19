@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Certificate Extractor & NFT Minting</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="static/favicon.jpg">
+</head>
+
+<body>
+    <!-- Welcome Section -->
+    <div id="welcome-section" class="container">
+        <h1>Welcome to the Certificate Information Extractor & NFT Minting System</h1>
+        <p>This system allows you to extract certificate details from PDFs, store metadata on-chain, mint NFTs, and
+            search for existing certificate NFTs.</p>
+        <button id="connect-wallet-btn">Connect Wallet</button>
+    </div>
+
+    <!-- Main Section -->
+    <div id="main-section" class="container" style="display: none;">
+        <h1>Certificate Information Extractor</h1>
+        <p>Select one or more PDF certificates to extract key details.</p>
+        <input type="file" id="file-input" accept="application/pdf" multiple />
+        <button id="upload-btn">Upload Certificate</button>
+        <button id="mint-btn">Mint Certificate as NFT</button>
+
+        <div id="results-container"></div>
+
+        <!-- Search Section -->
+        <h2>Search for Existing Certificate NFTs</h2>
+        <input type="text" id="search-nft-id" placeholder="Enter NFT ID" />
+        <button id="search-btn">Search NFT</button>
+
+        <div id="search-results-container"></div>
+    </div>
+
+    <!-- Load PDF.js and Web3.js from CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.10.377/pdf.min.js"></script>
+    <script src='https://cdn.jsdelivr.net/npm/web3@latest/dist/web3.min.js'></script>
+    <script src="./script.js"></script>
+</body>
+
+</html>
